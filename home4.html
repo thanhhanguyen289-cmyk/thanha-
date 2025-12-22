@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Tạo 4 cột nằm cạnh nhau */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+/* Đáp ứng: Trên màn hình nhỏ hơn 800px, chia làm 2 cột */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Đáp ứng: Trên màn hình nhỏ hơn 600px, chia làm 1 cột (xếp chồng) */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Responsive Image Gallery</h1>
+  <p>Hãy thử co giãn trình duyệt để thấy hiệu quả.</p>
+</div>
+
+<!-- Photo Grid -->
+<div class="container"> 
+  <div class="column">
+    <img src="www.w3schools.com" style="width:100%">
+    <img src="www.w3schools.com" style="width:100%">
+  </div>
+  
+  <div class="column">
+    <img src="www.w3schools.com" style="width:100%">
+    <img src="www.w3schools.com" style="width:100%">
+  </div> 
+   
+  <div class="column">
+    <img src="www.w3schools.com" style="width:100%">
+    <img src="www.w3schools.com" style="width:100%">
+  </div>
+  
+  <div class="column">
+    <img src="www.w3schools.com" style="width:100%">
+    <img src="www.w3schools.com" style="width:100%">
+  </div>
+</div>
+
+</body>
+</html>
