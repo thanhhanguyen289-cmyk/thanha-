@@ -1,23 +1,59 @@
-/* Container chính (vùng màu xanh dương) */
-.day {
-    display: flex;             /* Kích hoạt Flexbox */
-    background-color: #1E90FF; /* Màu xanh DodgerBlue */
-    padding: 10px;             /* Khoảng cách đệm bên trong vùng xanh */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* Các item con (các ô màu xám chứa thứ trong tuần) */
-.day > div {
-    background-color: #f1f1f1; /* Màu nền xám nhạt */
-    margin: 10px;              /* Khoảng cách giữa các ô */
-    padding: 20px;             /* Khoảng cách từ chữ đến viền ô */
-    font-size: 30px;           /* Kích thước chữ */
-    flex: 1;                   /* Giúp các ô có độ rộng bằng nhau */
-    text-align: center;        /* Căn giữa chữ */
+body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-/* Định dạng đoạn văn bản bên dưới */
-p {
-    font-family: Arial, sans-serif;
-    margin-top: 20px;
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-right: 25px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #ccc;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.side-column {
+    flex: 1;
+}
+
+.main-content {
+    flex: 2;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
 }
