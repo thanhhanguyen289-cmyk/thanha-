@@ -1,29 +1,44 @@
+/* Thiết lập cơ bản */
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 
-/* Top navigation */
-.topnav {
-    background-color: #333;
+/* 1. Định dạng thanh menu bên trái (Sidenav) */
+.sidenav {
+  height: 100%;       /* Chiều cao hết toàn bộ màn hình */
+  width: 200px;       /* Độ rộng của menu */
+  position: fixed;    /* Cố định vị trí khi cuộn trang */
+  z-index: 1;         /* Đảm bảo menu nằm trên cùng */
+  top: 0;             /* Sát mép trên */
+  left: 0;            /* Sát mép trái */
+  background-color: #111; /* Màu nền đen */
+  overflow-x: hidden; /* Ẩn thanh cuộn ngang nếu có */
+  padding-top: 20px;
 }
 
-.topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    display: inline-block;
+/* Định dạng các đường link trong menu */
+.sidenav a {
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;    /* Màu chữ xám nhạt */
+  display: block;    /* Mỗi link nằm trên một dòng */
 }
 
-/* Content */
+/* Hiệu ứng khi di chuột qua link */
+.sidenav a:hover {
+  color: #f1f1f1;    /* Chữ sáng lên khi hover */
+}
+
+/* 2. Định dạng phần nội dung chính (Content) */
 .content {
-    background-color: #e5e5e5;
-    padding: 20px;
-    height: 200px;
+  margin-left: 200px; /* Quan trọng: Đẩy nội dung sang phải để không bị menu đè lên */
+  padding: 0px 20px;
 }
 
-/* Footer */
-.footer {
-    background-color: #f1f1f1;
-    padding: 15px;
+/* Responsive: Điều chỉnh cho màn hình nhỏ (tùy chọn) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
