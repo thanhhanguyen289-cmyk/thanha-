@@ -1,4 +1,4 @@
-/* Thiết lập cơ bản để tính toán kích thước chuẩn xác */
+/* Thiết lập cơ bản */
 * {
   box-sizing: border-box;
 }
@@ -8,39 +8,38 @@ body {
   margin: 0;
 }
 
-/* Định dạng Header */
-.header {
-  background-color: #f1f1f1;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
+/* 1. Định dạng thanh điều hướng (topnav) */
+.topnav {
+  overflow: hidden;
+  background-color: #333; /* Màu nền đen xám */
 }
 
-/* Tạo 3 cột nằm cạnh nhau bằng float */
-.column {
+/* Định dạng các đường link trong topnav */
+.topnav a {
   float: left;
-  width: 33.33%; /* Chia đều 100% cho 3 cột */
-  padding: 10px;
-  height: 300px; /* Bạn có thể thay đổi chiều cao tùy ý */
-}
-
-/* Clear floats sau các cột (để hàng tiếp theo không bị dính lẹo) */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Định dạng Footer */
-.footer {
-  background-color: #f1f1f1;
-  padding: 10px;
+  display: block;
+  color: #f2f2f2;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-/* Responsive: Khi màn hình nhỏ hơn 600px, các cột sẽ xếp chồng lên nhau */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
+/* Thay đổi màu nền khi di chuột qua link (hover) */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* 2. Định dạng khu vực nội dung (content) */
+.content {
+  background-color: #ddd; /* Màu xám đậm hơn một chút */
+  padding: 20px;
+  height: 200px; /* Độ cao tùy chỉnh theo ý muốn */
+}
+
+/* 3. Định dạng chân trang (footer) */
+.footer {
+  background-color: #f1f1f1; /* Màu xám nhạt */
+  padding: 10px;
+  padding-left: 20px; /* Căn lề trái cho chữ Footer */
 }
