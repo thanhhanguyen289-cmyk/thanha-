@@ -1,46 +1,37 @@
-/* Thiết lập cơ bản để tính toán kích thước chuẩn xác */
-* {
-  box-sizing: border-box;
-}
-
+/* 1. Xóa khoảng trắng thừa của trình duyệt */
 body {
-  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Định dạng Header */
-.header {
-  background-color: #f1f1f1;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
+/* 2. Định dạng thanh menu bên trái (Sidenav) */
+.sidenav {
+  height: 100%;       /* Cao hết màn hình */
+  width: 160px;       /* Độ rộng cố định */
+  position: fixed;    /* Giữ cố định, cuộn trang không bị trôi */
+  z-index: 1;         /* Đảm bảo menu luôn nằm trên nội dung */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Màu nền đen đen như hình */
+  padding-top: 20px;
 }
 
-/* Tạo 3 cột nằm cạnh nhau bằng float */
-.column {
-  float: left;
-  width: 33.33%; /* Chia đều 100% cho 3 cột */
-  padding: 10px;
-  height: 300px; /* Bạn có thể thay đổi chiều cao tùy ý */
+/* 3. Định dạng các đường link trong menu */
+.sidenav a {
+  padding: 10px 15px; /* Tạo khoảng trống quanh chữ để dễ bấm */
+  text-decoration: none; /* Bỏ gạch chân */
+  font-size: 20px;
+  color: #818181;    /* Màu chữ xám */
+  display: block;    /* Mỗi link là một dòng riêng biệt */
 }
 
-/* Clear floats sau các cột (để hàng tiếp theo không bị dính lẹo) */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+/* 4. Hiệu ứng khi di chuột vào link */
+.sidenav a:hover {
+  color: #f1f1f1;    /* Chữ sáng lên khi di chuột vào */
 }
 
-/* Định dạng Footer */
-.footer {
-  background-color: #f1f1f1;
-  padding: 10px;
-  text-align: center;
-}
-
-/* Responsive: Khi màn hình nhỏ hơn 600px, các cột sẽ xếp chồng lên nhau */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
+/* 5. Quan trọng: Định dạng phần nội dung bên phải */
+.content {
+  margin-left: 160px; /* Cách lề trái đúng bằng độ rộng menu để không bị đè */
+  padding: 0 20px;    /* Khoảng cách chữ so với mép */
 }
