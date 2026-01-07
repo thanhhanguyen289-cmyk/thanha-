@@ -1,44 +1,29 @@
-/* 1. Thiết lập chung cho toàn trang */
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Template</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Đảm bảo footer nằm ở đáy trang */
-}
+    <!-- Top Navigation -->
+    <div class="topnav">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
 
-/* 2. Thanh điều hướng (Header/Topnav) */
-.header {
-  background-color: #333; /* Màu xám đen */
-  padding: 15px;
-}
+    <!-- Content -->
+    <div class="content">
+        <h1>CSS Template</h1>
+        <p>A topnav, content and a footer.</p>
+    </div>
 
-.header a {
-  color: white;
-  text-decoration: none;
-  padding: 0 15px;
-  font-size: 18px;
-}
+    <!-- Footer -->
+    <div class="footer">
+        <p>Footer</p>
+    </div>
 
-/* 3. Phần nội dung chính (Content) */
-.content {
-  background-color: #ddd; /* Màu xám trung bình */
-  padding: 60px 20px;
-  flex: 1; /* Chiếm hết khoảng trống giữa header và footer */
-}
-
-.content h1 {
-  margin-top: 0;
-  font-size: 32px;
-}
-
-/* 4. Phần chân trang (Footer) */
-.footer {
-  background-color: #f1f1f1; /* Màu xám trắng nhạt */
-  padding: 20px;
-  font-size: 18px;
-}
+</body>
+</html>
