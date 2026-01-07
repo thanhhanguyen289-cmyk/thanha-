@@ -2,36 +2,31 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Home 07</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Card</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <div class="post">
-        <div class="post-image">
-            <img src="1.jpg" alt="Landscape">
-        </div>
-
-        <div class="post-content">
-            <h2>TITLE HEADING</h2>
-            <p class="post-meta">Title description, April 7, 2014</p>
-
-            <p class="post-text">
-                Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl.
-                Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim,
-                ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam
-                corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum,
-                porta lectus vitae, ultrices congue gravida diam non fringilla.
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Mountains" class="card-image">
+        
+        <div class="card-content">
+            <h2 class="title">TITLE HEADING</h2>
+            <p class="subtitle">Title description, <span class="date">April 7, 2014</span></p>
+            
+            <p class="description">
+                Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
             </p>
-
-            <div class="post-footer">
-                <a href="#" class="btn">READ MORE »</a>
-                <span class="comments">Comments <b>0</b></span>
+            
+            <div class="card-footer">
+                <button class="read-more">READ MORE »</button>
+                <div class="comments">
+                    Comments <span class="comment-count">0</span>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 </body>
 </html>
