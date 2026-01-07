@@ -4,21 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Template</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Thiết lập cơ bản cho trang */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        /* Định dạng thanh menu bên trái (Sidenav) */
+        .sidenav {
+            height: 100%;       /* Chiều cao toàn màn hình */
+            width: 160px;       /* Chiều rộng cố định */
+            position: fixed;    /* Cố định tại chỗ khi cuộn trang */
+            z-index: 1;         /* Đảm bảo nằm trên các thành phần khác */
+            top: 0;
+            left: 0;
+            background-color: #111; /* Màu nền đen như trong hình */
+            overflow-x: hidden; /* Ẩn thanh cuộn ngang nếu có */
+            padding-top: 20px;
+        }
+
+        /* Định dạng các đường link trong menu */
+        .sidenav a {
+            padding: 15px 8px 15px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #f1f1f1;    /* Màu chữ trắng/xám nhẹ */
+            display: block;     /* Hiển thị dạng khối để dễ nhấn */
+        }
+
+        /* Hiệu ứng khi di chuột qua link */
+        .sidenav a:hover {
+            color: #ffffff;
+            background-color: #333;
+        }
+
+        /* Định dạng phần nội dung chính */
+        .content {
+            margin-left: 160px; /* Đẩy nội dung sang phải để không bị menu đè lên */
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
 
 <div class="sidenav">
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-    <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
 </div>
 
 <div class="content">
-    <h2>CSS Template</h2>
-    <p>A full-height, fixed sidenav and content.</p>
+  <h2>CSS Template</h2>
+  <p>A full-height, fixed sidenav and content.</p>
 </div>
 
 </body>
 </html>
-
