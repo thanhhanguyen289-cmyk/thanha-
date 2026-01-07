@@ -1,77 +1,81 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
+/* Thiết lập cơ bản cho trang */
 body {
+    font-family: Arial, sans-serif;
     background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-.container {
-    width: 80%;
-    margin: 30px auto;
+/* Định dạng khung thẻ (Card) */
+.card {
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.post {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.post-image img {
+/* Định dạng hình ảnh */
+.card-image {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.post-content {
+/* Khoảng cách bên trong nội dung */
+.card-content {
     padding: 20px;
 }
 
-.post-content h2 {
+.title {
+    margin: 10px 0;
     font-size: 24px;
-    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
-.post-meta {
-    color: #777;
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-.post-text {
-    font-size: 15px;
-    line-height: 1.6;
+.subtitle {
+    color: #666;
     margin-bottom: 20px;
 }
 
-.post-footer {
+.date {
+    color: #999;
+}
+
+.description {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Định dạng phần chân thẻ */
+.card-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.btn {
-    text-decoration: none;
+.read-more {
+    background-color: white;
     border: 1px solid #ccc;
-    padding: 10px 16px;
-    color: #000;
-    font-size: 14px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.btn:hover {
-    background-color: #000;
-    color: #fff;
+.read-more:hover {
+    background-color: #ddd;
 }
 
+/* Định dạng phần bình luận */
 .comments {
     font-size: 14px;
 }
 
-.comments b {
-    background-color: #000;
-    color: #fff;
-    padding: 3px 8px;
-    border-radius: 50%;
+.comment-count {
+    background-color: black;
+    color: white;
+    padding: 2px 8px;
+    margin-left: 5px;
 }
