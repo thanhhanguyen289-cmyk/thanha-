@@ -1,37 +1,49 @@
-/* 1. Xóa khoảng trắng thừa của trình duyệt */
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
 }
 
-/* 2. Định dạng thanh menu bên trái (Sidenav) */
-.sidenav {
-  height: 100%;       /* Cao hết màn hình */
-  width: 160px;       /* Độ rộng cố định */
-  position: fixed;    /* Giữ cố định, cuộn trang không bị trôi */
-  z-index: 1;         /* Đảm bảo menu luôn nằm trên nội dung */
-  top: 0;
-  left: 0;
-  background-color: #111; /* Màu nền đen đen như hình */
-  padding-top: 20px;
+.container {
+    width: 800px;
+    height: 350px;
+    border: 1px solid #000;
+    display: flex;
+    margin: 20px auto;
 }
 
-/* 3. Định dạng các đường link trong menu */
-.sidenav a {
-  padding: 10px 15px; /* Tạo khoảng trống quanh chữ để dễ bấm */
-  text-decoration: none; /* Bỏ gạch chân */
-  font-size: 20px;
-  color: #818181;    /* Màu chữ xám */
-  display: block;    /* Mỗi link là một dòng riêng biệt */
+/* Menu trái */
+.sidebar {
+    width: 200px;
+    background-color: #e6e6e6;
 }
 
-/* 4. Hiệu ứng khi di chuột vào link */
-.sidenav a:hover {
-  color: #f1f1f1;    /* Chữ sáng lên khi di chuột vào */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* 5. Quan trọng: Định dạng phần nội dung bên phải */
+.sidebar li {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sidebar li.active {
+    background-color: #999;
+    color: white;
+    font-weight: bold;
+}
+
+/* Nội dung */
 .content {
-  margin-left: 160px; /* Cách lề trái đúng bằng độ rộng menu để không bị đè */
-  padding: 0 20px;    /* Khoảng cách chữ so với mép */
+    flex: 1;
+    padding: 20px;
+}
+
+.content h1 {
+    margin-top: 0;
+}
+
+.content ol {
+    margin-left: 20px;
 }
