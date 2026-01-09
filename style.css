@@ -1,49 +1,61 @@
-body {
+/* Thiết lập cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
 }
 
+/* Khung bao ngoài sử dụng Flexbox để chia cột */
 .container {
-    width: 800px;
-    height: 350px;
-    border: 1px solid #000;
     display: flex;
-    margin: 20px auto;
+    width: 100%;
+    min-height: 100vh;
+    border: 1px solid #000; /* Viền ngoài giống trong hình */
 }
 
-/* Menu trái */
+/* Cấu hình Sidebar (Cột trái) */
 .sidebar {
-    width: 200px;
-    background-color: #e6e6e6;
+    width: 250px;
+    background-color: #f0f0f0; /* Màu xám nhạt */
+    border-right: 1px solid #ccc;
 }
 
 .sidebar ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
 }
 
 .sidebar li {
-    padding: 12px;
-    border-bottom: 1px solid #ccc;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
 }
 
+/* Màu xám đậm cho mục Trang chủ đang chọn */
 .sidebar li.active {
-    background-color: #999;
+    background-color: #888;
     color: white;
-    font-weight: bold;
 }
 
-/* Nội dung */
+/* Cấu hình Nội dung (Cột phải) */
 .content {
     flex: 1;
-    padding: 20px;
+    padding: 40px;
 }
 
 .content h1 {
-    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.content h3 {
+    margin-bottom: 15px;
 }
 
 .content ol {
-    margin-left: 20px;
+    margin-left: 40px;
+}
+
+.content li {
+    margin-bottom: 5px;
 }
